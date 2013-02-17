@@ -1,0 +1,21 @@
+#index.php (Top Page)
+ -> #info.php (Infomation)
+ 		-> #contact.php (Contact to Administrator)
+ 				-> #dm.php (Send Direct Message)
+ -> #menu.php (Pegasus Menu)
+ 		-> #login.php (Login)
+ 				-> #auth.php (Login Session Authenticate)
+ 					(user)		-> #form.php (Database Insert Form)
+ 										-> #insert.php (Send Piece to Database)
+ 					(admin)	-> #inquiry.php (Database Get Tuples)
+ 										-> #adminform.php (Twitter Status Update Form for Administrator)
+ 												-> #adminpost.php (Send Twitter Status for Administrator)
+ 		-> #tech.php (Technology Infomation)
+ 				-> #contact.php (Contact to Administrator)
+ 						-> #dm.php (Send Direct Message)
+
+[#config.php] Server,Password Infomation
+[#cron.php] Deamon Program
+[#method.php] Class Libruary (Twitter,mySQL,WebPage)
+[#phpinfo.php] PHPinfo Page
+[#templete.php] WebPage Common Templete
