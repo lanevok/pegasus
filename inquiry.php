@@ -27,7 +27,7 @@ unset($srv);
 // タプルの数を出力
 // print "<h3>Number of Pieces : ".mysql_num_rows($result)."</h3>";
 
-print "<a href=\"./adminform.php\">adminform</a>";
+print "<a href=\"./adminform.php\">adminform</a><br><br>";
 
 // テーブルの生成
 echo "<table border=\"1\" frame=\"box\">";

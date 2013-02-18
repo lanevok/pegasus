@@ -40,6 +40,8 @@ $srv = new SQL();
 $srv->add($tweet_text);
 
 $srv = new WebPage();
-$srv->SimplePage("info", "登録完了", "ピースの登録が完了しました。");
+$srv->SimplePage("info", "登録完了", "ピースの登録が完了しました。<br>
+		<br>右上の「Home」よりトップページへどうぞ。
+		<br>「戻るボタン」は使用することはできません。");
 unset($srv);
 

@@ -11,6 +11,7 @@ unset($api);
 // CSRF対策
 $srv = new WebPage();
 $srv->checkToken($_SESSION["token"], $_POST["token"]);
+$_SESSION["token"] = array();
 unset($srv);
 
 // セッションとクッキーの破棄
@@ -42,5 +43,5 @@ $srv->AdminDM($tweet_text);
 
 
 $srv = new WebPage();
-$srv->SimplePage("info", "メッセージ送信", "運営にメッセージを送信しました");
+$srv->SimplePage("info", "メッセージ送信", "運営にメッセージを送信しました。");
 unset($srv);

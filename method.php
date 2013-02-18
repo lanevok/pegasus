@@ -88,8 +88,8 @@ Class Twitter {
  * mySQLクラス
  * @author (TAT)chaN
  * @copyright lanevok.com
- * @since 2013.2.11
- * @version 1.1
+ * @since 2013.2.18
+ * @version 1.2
  *
  */
 Class SQL {
@@ -197,7 +197,7 @@ Class SQL {
 	private function Error(){
 		print "<h2>なんらかのエラーが発生しました</h2>";
 		$api = new WebPage();
-		$api->setText("log",time().".txt",mysql_error());
+		$api->setText("log",time().rand(0, 9999).".txt",mysql_error());
 		die();
 // 		die(mysql_error());
 	}

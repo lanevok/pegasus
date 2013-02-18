@@ -10,6 +10,13 @@ session_destroy();
 require_once('template.php');
 require 'method.php';
 
+// リリース設定
+$open = "1361437200";
+if($open>=time()){
+	print "<h4>2013年2月21日 18時0分 よりサイトがオープンします。</h4>";
+	exit();
+}
+
 // 多量リクエスト対策
 $api = new WebPage();
 $api->hugeRequest();
@@ -25,7 +32,7 @@ print_r(plate_header1);
 print_r(plate_header2);
 ?>
 <div class="alert alert-info">
-  <strong>News : </strong>本日、Pegasus をリリースしました。
+  <strong>News : </strong>Pegasus をリリースしました。
 </div>
 <div class="hidden-phone">
 	<div class="jumbotron"

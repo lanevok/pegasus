@@ -3,6 +3,15 @@
 require 'method.php';
 require 'config.php';
 
+// 強制停止
+$srv = new WebPage();
+$run = $srv->getText(run);
+if($run!="run") exit();
+
+// リリース設定
+$open = "1361437200";
+if($open>=time()) exit();
+
 $cronTime = time();
 print "<h1><font color=\"#0000FF\">CRON DEAMON</font></h1>";
 
@@ -35,7 +44,7 @@ if($nowHour==4&&$nowMins==0){
 	}
 	$write .= "</table>";
 	$srv = new WebPage();
-	$srv->setText("backup", time().".html", $write);
+	$srv->setText("backup", time().rand(0, 9999).".html", $write);
 	print "<h4>→バックアップが完了しました";
 }
 else{
@@ -53,7 +62,7 @@ foreach ($result as $post){
 	$text = $post->text;	// 1件ごとのツイート文字列取得
 
 	// 正規表現によりピース登録の対象ツイートか判定する
-	if(preg_match("/りんご/", $text)&&preg_match("/みかん/", $text)){
+	if(preg_match("/ピース/", $text)&&preg_match("/登録/", $text)){
 		// ツイート実行日時を取得
 		$createdAt = strtotime($post->created_at);
 		// リプライ元ツイートIDを取得
